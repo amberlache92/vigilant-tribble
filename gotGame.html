@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="application.js"type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab" rel="stylesheet">
+
+	<title>Game of thrones</title>
+ <style >
+ *{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ body{
+  font-size: 100%;
+ 	background-image: url(black_paper.png);
+ 	background-color: #171717;
+ 	font-family: 'Fredericka the Great', cursive;
+     text-transform: uppercase;
+   color: #F6F1F1;
+
+
+ }
+
+ .container{
+ 	background-color: transparent;
+ 	 	margin: 0 auto;
+  width: 80%;
+  height: auto;
+  padding-top: 25px;
+  
+  
+ }
+ .container{
+ 	text-align: center;
+ }
+.questions{
+  padding-top: 30px;
+}
+ label{
+  margin:5px 0;
+  display: inline-block;
+
+ }
+ input{
+ 	display: block;
+ 	margin: 0 auto;
+ 	text-align: center;
+ 	padding:5px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+  font-variant: 24px;
+
+
+ }
+ #gotName{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+  margin-top: 30px;
+ }
+ </style>
+</head>
+<body>
+ 
+ <div class="container">  
+   <h1>lets play the name game of thrones!</h1>
+  
+  <div class="questions">
+    <form>
+    	<label for="gender">Are you male or female</label><span id="error-gender"></span>
+    	<input type="text" name="gender" id="gender"><br><br>
+
+    	<label for="fName">Whats your first name?</label><span id="error-fName"></span>
+    	<input type="text" name="fName" id="fName"><br><br>
+
+    	<label for="lName">Whats your last name?</label><span id="error-lName"></span>
+    	<input type="text" name="lName" id="lName"><br><br>
+
+    	<label for="month">What month were you born in?</label><span id="error-month"></span>
+    	<input type="text" name="month" id="month"><br><br>
+
+    	<input type="button" id="execute" value="get your name">
+
+    	<input size="100"type="text" id="gotName" disabled>
+    </form>		 
+	</div>
+</div>
+
+</body>
+</html>
