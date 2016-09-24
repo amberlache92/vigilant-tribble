@@ -6,17 +6,17 @@
 <script src="application.js"type="text/javascript"></script>
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab" rel="stylesheet">
 
-	<title>Game of thrones</title>
+  <title>Game of thrones</title>
  <style >
  *{
- 	padding: 0;
- 	margin: 0;
+  padding: 0;
+  margin: 0;
  }
  body{
   font-size: 100%;
- 	background-image: url(black_paper.png);
- 	background-color: #171717;
- 	font-family: 'Fredericka the Great', cursive;
+  background-image: url(black_paper.png);
+  background-color: #171717;
+  font-family: 'Fredericka the Great', cursive;
      text-transform: uppercase;
    color: #F6F1F1;
 
@@ -24,8 +24,8 @@
  }
 
  .container{
- 	background-color: transparent;
- 	 	margin: 0 auto;
+  background-color: transparent;
+    margin: 0 auto;
   width: 80%;
   height: auto;
   padding-top: 25px;
@@ -33,7 +33,7 @@
   
  }
  .container{
- 	text-align: center;
+  text-align: center;
  }
 .questions{
   padding-top: 30px;
@@ -44,10 +44,10 @@
 
  }
  input{
- 	display: block;
- 	margin: 0 auto;
- 	text-align: center;
- 	padding:5px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding:5px;
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
   font-variant: 24px;
@@ -70,23 +70,43 @@
   
   <div class="questions">
     <form>
-    	<label for="gender">Are you male or female</label><span id="error-gender"></span>
-    	<input type="text" name="gender" id="gender"><br><br>
+      <label for="gender">Are you male or female</label><span id="error-gender"></span><br><br>
+      <select id="gender">
+        <option value="SELECT">SELECT GENDER</option>
+        <option value="MALE">MALE</option>
+        <option value="FEMALE">FEMALE</option>
+      </select><br><br>
 
-    	<label for="fName">Whats your first name?</label><span id="error-fName"></span>
-    	<input type="text" name="fName" id="fName"><br><br>
+      <label for="month">What month were you born in?</label><span id="error-month"></span><br><br>
+      <select id="month">
+        <option value="SELECT MONTH">SELECT MONTH </option> 
+        <option value="JANUARY">JANAURY</option>
+        <option value="FEBUARY">FEBUARY</option>
+        <option value="MARCH">MARCH</option>
+        <option value="APRIL">APRIL</option>
+        <option value="MAY">MAY</option>
+        <option value="JUNE">JUNE</option>
+        <option value="JULY">JULY</option>
+        <option value="AUGUST">AUGUST</option> 
+        <option value="SEPTEMBER">SEPTEMBER</option>
+        <option value="OCTOBER">OCTOBER</option>
+        <option value="NOVEMBER">NOVEMBER</option>
+        <option value="DECEMBER">DECEMBER </option>  
+      </select><br><br>
 
-    	<label for="lName">Whats your last name?</label><span id="error-lName"></span>
-    	<input type="text" name="lName" id="lName"><br><br>
+      <label for="fName">Whats your first name?</label><span id="error-fName"></span>
+      <input type="text" name="fName" id="fName"><br><br>
 
-    	<label for="month">What month were you born in?</label><span id="error-month"></span>
-    	<input type="text" name="month" id="month"><br><br>
+      <label for="lName">Whats your last name?</label><span id="error-lName"></span>
+      <input type="text" name="lName" id="lName"><br><br>
 
-    	<input type="button" id="execute" value="get your name">
+   
 
-    	<input size="100"type="text" id="gotName" disabled>
-    </form>		 
-	</div>
+      <input type="button" id="execute" value="get your name">
+
+      <input size="100"type="text" id="gotName" disabled>
+    </form>    
+  </div>
 </div>
 
 </body>

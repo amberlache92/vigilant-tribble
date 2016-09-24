@@ -1,4 +1,5 @@
 
+
       
 //function
 var $= function(id){
@@ -14,8 +15,8 @@ var findName= function(){
 
 
 //user input
-var gender=$('gender').value.toUpperCase();
-var birthMonth=$('month').value.toUpperCase();
+var gender=$('gender').value;
+var birthMonth=$('month').value;
 var fName=$('fName').value;
 var fLetter=fName.charAt(0).toUpperCase();
 var lName=$('lName').value;
