@@ -1,15 +1,15 @@
 
 
+  
+
       
 //function
 var $= function(id){
       return document.getElementById(id);
 }
 
+var isValid=true;
 
-
-
-  var isValid=true;
 
 var findName= function(){
 
@@ -18,6 +18,7 @@ var findName= function(){
 var gender=$('gender').value;
 var birthMonth=$('month').value;
 var fName=$('fName').value;
+
 var fLetter=fName.charAt(0).toUpperCase();
 var lName=$('lName').value;
 var lLetter=lName.charAt(0).toUpperCase();
@@ -423,7 +424,7 @@ else if(birthMonth=='MARCH'){
 }
 
 else if(birthMonth=='APRIL'){
-      var title="Night of the KingsGuard";
+      var title="Knight of the KingsGuard";
 }
 else if(birthMonth=='MAY'){
         if(gender=='MALE'){
@@ -476,23 +477,40 @@ else {
   console.log(isValid);
 
 
- if(gender != 'MALE' || 'FEMALE'){
-   $('error-gender').value='Please enter male or female';
+ if( $('gender').selectedIndex== '0'){
+   $('error-gender').firstChild.nodeValue='Please select male or female';
+
+   var isValid=false;
+ }
+
+
+
+  if($('month').selectedIndex== '0'){
+   $('error-month').firstChild.nodeValue='Please select month';
+
+   isValid=false;
+ }
+  if(fName==" " || isNaN(fName)==false){
+   $('error-fName').firstChild.nodeValue='Please enter your first name';
+
+   isValid=false;
+ }
+if(lName==" " || isNaN(fName)==false){
+   $('error-lName').firstChild.nodeValue='Please enter your last name';
 
    isValid=false;
  }
 
- console.log(gender);
- console.log(isValid);
 
- var answer= fName+ " "+ "your Game of Thrones Name is "+ " "+ gotFname+ " "+ title+ " "+" of house "+ " "+ gotLname;
+ var answer= fName + "  "+ "your Game of Thrones Name is "+ " "+ gotFname+ "  , "+ title+ " "+" of house "+ " "+ gotLname;
    $('gotName').value=answer;
 
 
     console.log(answer);
-
 }
 
+
+ 
 
  if (isValid==true){
 
@@ -501,3 +519,4 @@ else {
       $('execute').onclick=findName;}
 
     } 
+    
