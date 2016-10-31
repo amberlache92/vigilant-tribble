@@ -8,10 +8,10 @@ var $= function(id){
       return document.getElementById(id);
 }
 
-var isValid=true;
 
 
 var findName= function(){
+ var isValid=true;
 
 
 //user input
@@ -438,7 +438,7 @@ else if(birthMonth=='MAY'){
 }
 
 else if(birthMonth=='JUNE'){
-      var title="Whore";
+      var title="Cupbearer";
 }
 else if(birthMonth=='JULY'){
       var title="Kings' hand";
@@ -501,22 +501,35 @@ if(lName==" " || isNaN(fName)==false){
    isValid=false;
  }
 
+ if(isValid==true){
 
  var answer= fName + "  "+ "your Game of Thrones Name is "+ " "+ gotFname+ "  , "+ title+ " "+" of house "+ " "+ gotLname;
    $('gotName').value=answer;
 
 
-    console.log(answer);
+  return isValid
+  }
 }
 
+var clear=function(){
+   $('error-gender').firstChild.nodeValue='*';
+   $('error-month').firstChild.nodeValue='*';
+   $('error-fName').firstChild.nodeValue='*';
+   $('error-lName').firstChild.nodeValue='*';
+
+}
 
  
 
- if (isValid==true){
+
 
     window.onload=function(){
 
-      $('execute').onclick=findName;}
+      $('execute').onclick=findName;
+      $('reset').onclick=clear;
 
-    } 
+    }
+
+    
+
     
